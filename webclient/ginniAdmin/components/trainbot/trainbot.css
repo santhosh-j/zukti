@@ -1,0 +1,25 @@
+#trainform
+{
+  width:65%;
+  height:10%;
+}
+#labelfield
+{
+  width:20%;
+  height:10%;
+}
+#buttonadd
+{
+  width:80%;
+  height:100%;
+}
+#inputtrain
+{
+  width: 45%;
+  height:10%;
+}
+#addintent
+{
+cursor: pointer;
+color:green;
+}

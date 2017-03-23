@@ -1,0 +1,47 @@
+{
+  "Interaction":{"name":"Zukti"},
+
+  "ExpiryLink":{"ExpiryLink":"Expired Link or Invalid URL"},
+
+  "ApplicationContent":{"Heading":"ZUKTI","Line1":"HERE COMES YOUR ZUKTI","Line2":"ANY QUERY HITS YOU HARDER? THEN I AM HERE TO PROVIDE YOU DAZZLING SOLUTIONS","Line3":"To iterate is human, to recurse is divine"},
+
+  "Logout":{"Heading1":"ZUKTI","Heading2":"Thanks For Your Visit !!","Heading3":"~~~COME BACK SOON~~~"},
+
+  "Emailsent":{"Heading1":"ZUKTI","Heading2":"Please click the verification link to complete Signup","Heading3":"Verification link is sent to your Registered mail","Heading4":"Thanks for registering"},
+
+  "Verified":{"Heading1":"ZUKTI","Heading2":"Suceessfully Verified","Heading3":"Login and get started!!"},
+
+  "LoginPage":{"Heading":"Welcome to Zukti","Line1":"Great to have you back","Line2":"You can sign in to Zukti with your existing Zukti account","Line3":"Not yet registered?","Line4":"Create Now"},
+
+  "Signup":{"Heading":"Welcome to Zukti","Line1":"Already a member?","Line2":"Sign in here"},
+
+  "ClientHome":{"Heading1":"I AM ZUKTI HERE TO ASSIST YOU IN","Heading2":"FOLLOWING TECHNOLOGIES","Topic1":"REACT","Topic2":"DESIGN PATTERN","Topic3":"JAVA","Topic4":"JAVASCRIPT","Topic5":"NODE","Topic6":"ADD BOT"},
+
+  "LeftMenu":{"Heading":"ZUKTI","Menu1":"Home","Menu2":"Let's Explore","Menu3":"Bookmarks","Menu4":"Notifications","Menu5":"Log out"},
+
+  "Bookmarks":{"Heading":"BOOKMARKED RESPONSES"},
+
+  "Notifications":{"Heading":"MESSAGE FROM ADMIN"},
+
+  "ForgetPasswordemail":{"Heading1":"ZUKTI","Heading2":"Please click the reset link to change password","Heading3":"Verification link is sent to your Registered mail","Heading4":"You can change your password now..!!"},
+
+  "ForgetPassword":{"Heading1":"ZUKTI","Heading2":"Password Reset","Heading3":"Forgot your password?No worries!! Give your registered mail to get reset link"},
+
+  "ChangePassword":{"Heading":"Change Password"},
+
+  "Mailnotsend":{"Heading1":"ZUKTI","Heading2":"Oops! Mail not Send, Due to some Network Error !!","Heading3":" Check your Network Connection !","Heading4":"Please, Sign up again..."},
+
+  "AdminHome":{"Heading1":"WELCOME","Heading2":"ADMIN","Topic1":"REACT","Topic2":"DESIGN PATTERNS","Topic3":"JAVA","Topic4":"JAVASCRIPT","Topic5":"NODE","Topic6":"ADD BOT"},
+
+  "Topmenu":{"Heading":"ZUKTI"},
+
+  "LogoutPage":{"Heading1":"Are You Sure?You want to Logout?"},
+
+  "AdminMenu":{"Topic1":"Setup Q&A","Topic2":"Broadcast","Topic3":"Users","Topic4":"Analyze","Topic5":"Train Intent","Topic6":"Unanswered Queries","Topic7":"Logout","Topic8":"Manage Concepts","Topic9":"View Graph","Topic10":"Test Graph"},
+
+  "SetUp":{"Heading":"It is a set of questions and the corresponding bot replies. Zukti will understand user questions similar to those you’ve set up and reply with a appropiate answer."},
+
+  "InitialWarning" :{"message": "(-----ABUSE DETECTED----CAUTION : only 3 warnings :Attempt: "},
+
+  "FinalWarning" :{"message": "FINAL Warning........."}
+}

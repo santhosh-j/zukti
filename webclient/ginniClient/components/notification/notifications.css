@@ -1,0 +1,18 @@
+h3{
+  text-align: center;
+};
+#user{
+  color:'#ff0000'
+}
+#notification,#messagesender
+{
+  font-weight: bold;
+  font-size: 15px;
+  font-style:normal;
+  margin-left: 1%;
+}
+#senderdate
+{
+
+  font-style:normal;
+}

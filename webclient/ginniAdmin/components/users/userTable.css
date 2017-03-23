@@ -1,0 +1,40 @@
+#tablecolor
+{
+backgroundColor:lightgray;
+}
+#cardstyle
+{
+width:80%;
+margin-top:-4px;
+}
+#header
+{
+  margin-left:2%;
+  margin-top:2%;
+}
+#commentstyle
+{
+  margin-left:2%;
+}
+#menustyle
+{
+margin-left:32%;
+}
+#cardlayoutstyle
+{
+padding-top:50px;
+}
+#eachcardstyle{
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+#cardgrouplayout{
+  max-width: 930px;
+margin-left: auto;
+margin-right: auto;
+}
+#parentcard
+{
+  height:150px;
+}

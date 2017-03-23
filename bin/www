@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+// creating an instance of zukti app
+let app = require('../webserver/webapp.service')();
+let log4js = require('log4js');
+let logger = log4js.getLogger();
+
+// listening to port 8080
+let server = app.listen(8080, '0.0.0.0', function(err, result) {
+    if (err) {
+        logger.debug("error: ", err);
+    }
+    logger.debug("server started at 8080");
+});
+let io = require('socket.io')(server);
+
+// socket.io demo
+io.on('connection', function(socket) {
+    socket.emit('server event', {
+        foo: 'bar'
+    });
+    socket.on('newQuery', function(data) {
+      socket.broadcast.emit('incrementQueryCount', data);
+    });
+    socket.on('userLoginStatus', function(data) {
+      socket.broadcast.emit('userLoggedIncount', data);
+    });
+
+    socket.on('client event', function(data) {
+        socket.broadcast.emit('update label', data);
+    });
+
+    // v2
+    socket.on('updateUserList', function() {
+      socket.broadcast.emit('update userlist');
+    });
+
+    // @keerthana:Listening sentiment socket
+    socket.on('sentiment', function(data) {
+        socket.broadcast.emit('sentiment score', data);
+    });
+
+});

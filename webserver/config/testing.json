@@ -1,0 +1,38 @@
+{
+"Login":{"email":"fashibarveen@gmail.com","password":"F@shila94"},
+
+"Signup":{"firstName":"Fashila","lastName":"Barveen","email":"fashibarveen@gmail.com", "password":"F@shila94"},
+
+"AdminSignup":{"firstName":"Hema","lastName":"Latha","email":"dharunhema@gmail.com", "password":"Hema123"},
+
+"AdminDetails":{"data":"dharunhema@gmail.com"},
+
+"CheckUser":{"email":"fashibarveen@gmail.com"},
+
+"ForgetPassword":{"email":"fashibarveen@gmail.com"},
+
+"DeleteUser":{"data":"fashibarveen@gmail.com"},
+
+"UpdatePassword":{"id":"0","pass":"$2a$08$qxeZbLnOF8CjzMOh9atb.unjPJKhu1/sd9ZeTdpKBjyO/Owhdf3.e"},
+
+"Send":{"data":"fashibarveen@gmail.com"},
+
+"UpdateProfile":{"firstname":"Fashila","lastname":"Barveen","email":"fashibarveen@gmail.com","name":"Fashila Barveen"},
+
+"Signout":{"email":"fashibarveen@gmail.com"},
+
+"Verify":{"email":"fashibarveen@gmail.com"},
+
+"ResetPassword":{"email":"fashibarveen@gmail.com","password":"F@shila94"},
+
+"clientinfo":{"email":"fashibarveen@gmail.com"},
+"bookmarks":{"email":"fashibarveen@gmail.com"},
+
+"VerifyQuestion":{"question":"what is react"},
+"Rateanswer":{"liked":"1","type":"Blog","value":"http://react.com"}
+
+
+
+
+
+}

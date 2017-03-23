@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        #container {
+            width: 610px;
+            height: 500px;
+        }
+    </style>
+    <title>Onto</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.plugins.dragNodes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.renderers.edgeLabels.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.renderers.parallelEdges.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.layout.noverlap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.plugins.animate.min.js"></script>
+    <script>
+        var entry = {
+            "nodes": [],
+            "edges": []
+        };
+
+        function AjaxCall() {
+            let query = localStorage.getItem("query");
+            console.log(query);
+            $.ajax({
+                url: "http://192.168.1.137:7474/db/data/cypher",
+                type: 'POST',
+                data: {
+                    "query": query
+                    // "query": "match (n:concept)-[r]-(m:concept) where n.name = 'component' return n,r,m"
+                    // "query": "match (n:intent)-[r]-(m:intent) where n.name = 'why' return n,r,m"
+                    // "query": "match (n:intent)-[r]-(m) return n,r,m"
+                },
+                beforeSend: function(request) {
+                    request.setRequestHeader("Authorization", "Basic " + btoa("neo4j:neo4js"));
+                },
+                success: function(data) {
+                    console.log(data);
+                    let existingNode = [];
+                    let existingEdge = [];
+                    let count = 1;
+
+                    function pushNode(item) {
+                        var node = {};
+                        existingNode.push(item.metadata.id);
+                        node.id = item.metadata.id;
+                        node.label = item.data.name;
+                        node.x = Math.random();
+                        node.y = Math.random();
+                        node.size = 5;
+                        if (item.metadata.labels == 'concept') {
+                            node.color = '#4da6ff';
+                        } else if (item.metadata.labels == 'blog') {
+                            node.color = '#9966ff';
+                        } else if (item.metadata.labels == 'intent') {
+                            node.color = '#29a329';
+                        } else if (item.metadata.labels == 'question') {
+                            node.color = '#ff3333';
+                        } else if (item.metadata.labels == 'text') {
+                            node.color = '#ff4d94';
+                        } else if (item.metadata.labels == 'video') {
+                            node.color = '#ffbb33';
+                        } else if (item.metadata.labels == 'image') {
+                            node.color = 'teal';
+                        }
+                        entry.nodes.push(node);
+                    }
+
+                    function pushEdge(item) {
+                        var edge = {};
+                        existingEdge.push(item.metadata.id)
+                        edge.id = item.metadata.id;
+                        edge.source = item.start.substr(item.start.length - 4);
+                        edge.target = item.end.substr(item.end.length - 4);
+                        edge.label = item.metadata.type;
+                        edge.type = 'curvedArrow';
+                        edge.color = 'grey';
+                        entry.edges.push(edge);
+                    }
+                    data.data.forEach((item, index) => {
+                        item.forEach((item, index) => {
+                            if (index % 2 == 0) {
+                                if (count == 1) {
+                                    pushNode(item);
+                                } else {
+                                    if (!existingNode.includes(item.metadata.id)) {
+                                        pushNode(item);
+                                    }
+                                }
+                            } else {
+                                if (count == 1) {
+                                    pushEdge(item);
+                                } else {
+                                    if (!existingEdge.includes(item.metadata.id)) {
+                                        pushEdge(item);
+                                    }
+                                }
+                            }
+                            count++;
+                        })
+                    });
+                    console.log(entry);
+                    DrawGraph(entry);
+                },
+                error: function(err) {
+                    console.log('error occurred on AJAX');
+                    console.log(err);
+                }
+            });
+        }
+
+        function DrawGraph(data) {
+
+            s = new sigma({
+                graph: data,
+                renderer: {
+                    container: document.getElementById('container'),
+                    type: 'canvas'
+                },
+                settings: {
+                    edgeLabelSize: 'proportional',
+                    minArrowSize: 5
+                }
+            });
+            var dragListener = sigma.plugins.dragNodes(s, s.renderers[0]);
+
+            dragListener.bind('startdrag', function(event) {
+                console.log(event);
+            });
+            dragListener.bind('drag', function(event) {
+                console.log(event);
+            });
+            dragListener.bind('drop', function(event) {
+                console.log(event);
+            });
+            dragListener.bind('dragend', function(event) {
+                console.log(event);
+            });
+            var noverlapListener = s.configNoverlap({
+                nodeMargin: 10,
+                scaleNodes: 1.05,
+                gridSize: 20
+            });
+            // Bind the events:
+            noverlapListener.bind('start stop interpolate', function(e) {
+                console.log(e.type);
+                if (e.type === 'start') {
+                    console.time('noverlap');
+                }
+                if (e.type === 'interpolate') {
+                    console.timeEnd('noverlap');
+                }
+            });
+            // Start the layout:
+            s.startNoverlap();
+        }
+        AjaxCall();
+    </script>
+</body>
+
+</html>

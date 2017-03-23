@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+        #editor
+        {
+            display: block;
+            width: 920px;
+            position: absolute;
+            top: 0;
+            right: 900px;
+            bottom: 99px;
+            left: -10px;
+        }
+      </style>
+</head>
+<body>
+<div id="editor"></div>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react-ace/4.1.6/react-ace.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+      var code = localStorage.getItem("code");
+      document.getElementById("editor").innerHTML = code;
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/dreamweaver");
+      editor.getSession().setMode("ace/mode/java");
+</script>
+</body>
+</html>

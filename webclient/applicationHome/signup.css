@@ -1,0 +1,152 @@
+#modalsignupcss{
+  -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:1; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:1; opacity:1}
+}
+#signup
+{
+  background-color: teal;
+color: white;
+text-align: center;
+}
+
+#buttonstyle
+{
+   background-color: teal;
+    color:white;
+    margin-left: 125px;
+    margin-top: 15px;
+    width: 250px;
+}
+#buttonstyle:hover
+{
+  color: teal;
+  background-color: white;
+}
+#input
+{
+  width:350px;
+}
+#formfield
+{
+  margin-left: 80px;
+  width: 350px;
+  margin-top: 0px;
+}
+
+#text
+{
+  margin-left: 100px;
+  width:270px;
+  color: green;
+}
+#textcolor
+{
+  color: #a54f4f ;
+}
+#space
+{
+  margin-left: 2%;
+}
+
+@media only screen and (max-width:360px){
+
+ #formfield
+  {
+    width: 300px;
+  }
+  #buttonstyle
+  {
+    color: white;
+    background-color: teal;
+    width:300px;
+  }
+  #input
+  {
+    width:300px;
+  }
+  #text
+  {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width:412px){
+
+ #formfield
+  {
+    margin-left: 10px;
+    width: 300px;
+    margin-top: 0px;
+  }
+  #buttonstyle
+  {
+    color: white;
+    background-color: teal;
+    width:300px;
+    margin-left: 10px;
+  }
+  #input
+  {
+    width:300px;
+  }
+  #text
+  {
+    margin-left: 15px;
+  }
+
+}
+@media only screen and (max-width:320px){
+
+ #formfield
+  {
+    width: 230px;
+  }
+  #buttonstyle
+  {
+    color: white;
+    background-color: teal;
+    width:230px;
+  }
+  #input
+  {
+    width:230px;
+  }
+  #text
+  {
+    margin-left: 5px;
+  }
+}
+@media only screen and (max-width:414px){
+
+ #formfield
+  {
+    width: 250px;
+    margin-left: 20px;
+  }
+  #buttonstyle
+  {
+    color: white;
+    background-color: teal;
+    width:250px;
+    margin-left: 20px;
+  }
+  #input
+  {
+    width:250px;
+  }
+  #text
+  {
+    margin-left: 25px;
+  }
+}

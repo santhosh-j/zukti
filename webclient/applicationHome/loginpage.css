@@ -1,0 +1,150 @@
+#modallogincss{
+  -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:1; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:1; opacity:1}
+}
+  #modalwindowlogin {
+    width: 800px;
+    height: 500px;
+    margin-left: -350px;
+    margin-top: -500px;
+  }
+  #formstyle {
+        margin-top: 20px;
+    }
+    #headerstyle {
+        text-align: center;
+        background-color: teal;
+        color: white;
+    }
+    #para {
+        text-align: center;
+    }
+    #para1 {
+        margin-left: 7%;
+    }
+    #forgotpassword {
+        margin-left: 130px;
+    }
+    #formfieldlogin {
+        width: 250px;
+        height: 50px;
+        margin-left: 45px;
+    }
+    #buttonwidthfacebook {
+        width: 250px;
+        margin-top: 9%;
+    }
+    #buttonwidthfacebook:hover {
+        background: transparent;
+        color: blue;
+    }
+    #buttonwidthgoogle {
+        width: 250px;
+        margin-top: 30px;
+    }
+  #buttonwidthgoogle:hover {
+        background: transparent;
+        color: red;
+    }
+    #buttonwidth1 {
+        width: 245px;
+        margin-top: 20px;
+        margin-left: 16%;
+    }
+    #buttonwidth1:hover {
+        background: transparent;
+        color: teal;
+    }
+    #footer {
+        margin-left: 50px;
+        color: red;
+    }
+  #stylelist {
+        margin-left: 200px;
+    }
+
+  @media only screen and (max-width:360px) {
+        #buttonwidthfacebook {
+            width: 250px;
+            margin-top: -60px;
+        }
+        #buttonwidthgoogle {
+            width: 250px;
+        }
+        #footer {
+            margin-top: -20px;
+        }
+    }
+    @media only screen and (max-width:414px) {
+        #buttonwidthfacebook {
+            width: 250px;
+            margin-top: 0px;
+        }
+        #buttonwidthgoogle {
+            width: 250px;
+            margin-top: 0px;
+        }
+        #buttonsegment {
+            margin-top: 0px;
+        }
+    }
+    @media only screen and (max-width:320px) {
+        #buttonwidthfacebook {
+            width: 220px;
+            margin-left: 0;
+        }
+        #buttonwidthgoogle {
+            width: 220px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+        #buttonsegment {
+            margin-top: 0px;
+        }
+        #formfieldlogin {
+            width: 240px;
+            height: 50px;
+            margin-left: 0px;
+        }
+        #buttonwidth1 {
+            width: 220px;
+            margin-left: 0;
+        }
+    }
+    @media only screen and (max-width:768px) {
+        #buttonwidthfacebook {
+            width: 220px;
+            margin-left: 0;
+        }
+        #buttonwidthgoogle {
+            width: 220px;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        #buttonsegment {
+            margin-top: 0px;
+        }
+        #formfieldlogin {
+            width: 240px;
+            height: 50px;
+            margin-left: 0px;
+        }
+        #buttonwidth1 {
+            width: 220px;
+            margin-left: 0;
+        }
+        #footer {
+            font-size: 12px;
+        }
+}

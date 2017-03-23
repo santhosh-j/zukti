@@ -1,0 +1,76 @@
+.heading1{
+  color:white;
+  cursor: pointer;
+}
+.imagepointer{
+  cursor: pointer;
+}
+.heading2{
+  color: grey;
+}
+.heading3{
+  color: grey;
+}
+.heading4{
+  color: grey;
+}
+.heading5{
+  color: grey;
+}
+.heading6{
+  color: grey;
+}
+#iconstyle
+{
+  cursor: pointer;
+}
+#sparkleadmin
+{
+    font-size: 40px;
+    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(green, transparent),
+             url(http://www.myspacehippo.com/files/glitterbacks/bg345.gif) repeat;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+}
+
+@media only screen and (max-width: 700px) {
+  .heading1{
+    font-size: 20px;
+  }
+  .heading2{
+    font-size: 20px;
+  }
+  .heading3{
+    font-size: 20px;
+  }
+  .heading4{
+    font-size: 20px;
+  }
+  .heading5{
+    font-size: 20px;
+  }
+  .heading6{
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .heading1{
+    font-size: 12px;
+  }
+  .heading2{
+    font-size: 12px;
+  }
+  .heading3{
+    font-size: 12px;
+  }
+  .heading4{
+    font-size: 12px;
+  }
+  .heading5{
+    font-size: 12px;
+  }
+  .heading6{
+    font-size: 12px;
+  }
+}

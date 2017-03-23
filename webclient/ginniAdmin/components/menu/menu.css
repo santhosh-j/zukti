@@ -1,0 +1,30 @@
+#leftbarmenu
+{
+    height: '100%';
+}
+#sidebarpusher
+{
+        width: '100%';
+      height:'100%';
+}
+  #segmentleftbar
+  {
+        margin-top:0%;
+        padding:0%;
+        height:100%;
+  }
+  #topmenudiv
+  {
+  width:89%;
+  background-color:#f3f2f2;
+  }
+  #leftmenucontentdiv
+  {
+    background-color:#f3f2f2;
+    height:100%;
+  }
+#accordian
+{
+  width:89%;
+ color:#f3f2f2;
+}

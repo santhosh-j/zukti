@@ -1,0 +1,20 @@
+#pager
+{
+  margin-left: 700px;
+    display: flex;
+  }
+  #dropdown
+  {
+    color:green;
+    font-style: normal;
+    font-size:18px;
+    font-weight: bold;
+  }
+  #title
+  {
+    font-style: normal;
+    font-size:15px;
+    font-weight: bold;
+    color:black;
+
+  }

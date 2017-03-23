@@ -1,0 +1,32 @@
+image: node:argon
+before_script:
+   - npm install --silent
+cache:
+ paths:
+   - node_modules/
+stages:
+ - lint
+ - test
+ - build
+ - clean_up
+run_eslint:
+ stage: lint
+ script:
+    - npm run lint  
+run_tests:
+ stage: test
+ script:
+    - npm test
+build_and_package_for_prod:
+ stage: build
+ script:
+  - npm run build
+  - mkdir  dist/build
+  - tar czfC dist/build/latest.tar.gz dist/$CI_BUILD_REF_NAME/ .
+  - tar czfC dist/build/$CI_BUILD_REF.tar.gz dist/$CI_BUILD_REF_NAME/ .
+clean_up_job:
+ stage: clean_up
+ script:
+  - rm -rf node_modules
+  - rm -rf ~/.node-gyp
+ when: on_failure
