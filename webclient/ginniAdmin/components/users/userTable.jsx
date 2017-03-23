@@ -25,19 +25,19 @@ export default class UserTable extends React.Component
         let socket = io();
 
         // populating the user list for the first time
-        Axios({url: 'http://localhost:8080/viewall', method: 'GET'}).then(function(response) {
+        Axios({url: 'http://192.168.1.55:8081/viewall', method: 'GET'}).then(function(response) {
             self.setState({userinformation: response.data});
             // console.log(JSON.stringify(response.data));
         });
         //@Deepika: To Get the Admin Details
-        Axios({url: 'http://localhost:8080/adminProfile', method: 'GET'}).then(function(response){
+        Axios({url: 'http://192.168.1.55:8081/adminProfile', method: 'GET'}).then(function(response){
           self.setState({admininDomainName: response.data[0].local.loggedinDomain});
           // console.log('Admindtails'+ response.data[0].local.loggedinDomain);
         });
 
        // @deepika: updating the user list on login or logout
         socket.on('update userlist', function() {
-            Axios({url: 'http://localhost:8080/viewall', method: 'GET'}).then(function(response) {
+            Axios({url: 'http://192.168.1.55:8081/viewall', method: 'GET'}).then(function(response) {
                 self.setState({userinformation: response.data});
                 // console.log(response.data);
             });

@@ -448,7 +448,7 @@ export default class AssistantGinniMixedReply extends React.Component {
   <Modal  id ="modelcontent" closeOnRootNodeClick={false} closeIcon ='close'
     trigger ={<Label basic color='orange' id='cursor' >Code</Label>}>
     <frameset>
-      <frame src="http://localhost:8080/code" style={{width:'50px'}}/>
+      <frame src="http://192.168.1.55:8081/code" style={{width:'50px'}}/>
     </frameset>
     {/* <pre>{value}</pre> */}
 

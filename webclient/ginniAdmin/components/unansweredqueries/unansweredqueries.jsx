@@ -12,7 +12,7 @@ export default class UnansweredQueries extends React.Component {
       };
   }
   componentDidMount() {
-      axios({url: 'http://localhost:8080/viewquery', method: 'GET'}).then(function(msg) {
+      axios({url: 'http://192.168.1.55:8081/viewquery', method: 'GET'}).then(function(msg) {
           this.setState({ detailNew: msg.data});
    }.bind(this)).catch(function(err) {
           console.log(err);

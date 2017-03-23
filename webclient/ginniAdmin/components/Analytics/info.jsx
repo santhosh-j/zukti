@@ -27,7 +27,7 @@ export default class Info extends React.Component {
         count = 0;
         count1 = 0;
         Axios({
-          url: 'http://localhost:8080/viewall',
+          url: 'http://192.168.1.55:8081/viewall',
           method: 'GET'})
           .then((response)=> {
             count = response.data.length;
@@ -36,14 +36,14 @@ export default class Info extends React.Component {
             console.log(err);
         });
         Axios({
-          url: 'http://localhost:8080/viewallonlineuser', method: 'GET'}).then((response)=> {
+          url: 'http://192.168.1.55:8081/viewallonlineuser', method: 'GET'}).then((response)=> {
               count1 = response.data.length;
             self.setState({countonline: count1});
         }).catch(function(err) {
             console.log(err);
         });
 
-        Axios.get('http://localhost:8080/analytics').
+        Axios.get('http://192.168.1.55:8081/analytics').
         then((response)=>{
           this.state.queryCount = response.data.queryCount;
           this.setState({queryCount: this.state.queryCount});

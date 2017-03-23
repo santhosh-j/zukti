@@ -6,7 +6,7 @@ let sinonMongoose = require('sinon-mongoose');
 let expect = require('chai').expect;
 let app = require("./../webserver/service.js");
 let UnansweredQuery = require('./../webserver/models/unansweredQuery.js');
-let url = supertest('http://localhost:8080/');
+let url = supertest('http://192.168.1.55:8081/');
 
 describe('Unanswered Query', () => {
 

@@ -33,7 +33,7 @@ export default class TrainBot extends React.Component {
         });
         this.setState({
             graph: <frameset>
-                    <frame src='http://localhost:8080/graphie'/>
+                    <frame src='http://192.168.1.55:8081/graphie'/>
                 </frameset>
         });
     }
@@ -47,7 +47,7 @@ export default class TrainBot extends React.Component {
         });
         this.setState({
             graph: <frameset>
-                    <frame src='http://localhost:8080/graphie'/>
+                    <frame src='http://192.168.1.55:8081/graphie'/>
                 </frameset>
         });
     }
@@ -57,7 +57,7 @@ export default class TrainBot extends React.Component {
           graph: <div>
                     <span></span>
                     <frameset>
-                        <frame src='http://localhost:8080/graphie'/>
+                        <frame src='http://192.168.1.55:8081/graphie'/>
                     </frameset>
                 </div>
       });

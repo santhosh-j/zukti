@@ -6,7 +6,7 @@ let sinonMongoose = require('sinon-mongoose');
 let expect = require('chai').expect;
 let app = require("./../webserver/service.js");
 let UserBookmarks = require('./../webserver/models/UserBookmarks.js');
-let url = supertest('http://localhost:8080/');
+let url = supertest('http://192.168.1.55:8081/');
 
 describe('Bookmarked messages', () => {
 

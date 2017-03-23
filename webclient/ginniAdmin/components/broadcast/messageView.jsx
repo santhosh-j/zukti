@@ -13,7 +13,7 @@ export default class MessageView extends React.Component {
     componentDidMount() {
       let self = this;
       Axios({
-          url: 'http://localhost:8080/userProfile',
+          url: 'http://192.168.1.55:8081/userProfile',
           method: 'GET',
           data: 'json'
         }).then(function (response) {

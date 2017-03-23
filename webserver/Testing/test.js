@@ -3,7 +3,7 @@ assert = require ("chai").assert,
 supertest = require("supertest"),
 app = require("../../server.js");
 
-var url = supertest("http://localhost:8080");
+var url = supertest("http://192.168.1.55:8081");
 let Testing = require('../config/testing');
 
 let log4js = require('log4js');

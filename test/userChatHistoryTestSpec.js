@@ -6,7 +6,7 @@ let sinonMongoose = require('sinon-mongoose');
 let expect = require('chai').expect;
 let app = require("./../webserver/service.js");
 let UserChatHistory = require('./../webserver/models/userChatHistory.js');
-let url = supertest('http://localhost:8080/');
+let url = supertest('http://192.168.1.55:8081/');
 
 
 describe('User Chat History', () => {

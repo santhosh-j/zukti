@@ -21,7 +21,7 @@ export default class TopMenuBot extends React.Component {
     // get user details from the server
     componentDidMount() {
         let self = this;
-        Axios({url: 'http://localhost:8080/userProfile',
+        Axios({url: 'http://192.168.1.55:8081/userProfile',
         method: 'GET', data: 'json'}).then(function(response) {
             let authType = Cookie.load('authType');
             if (authType === 'local') {

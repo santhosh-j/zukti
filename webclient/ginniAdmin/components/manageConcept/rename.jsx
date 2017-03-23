@@ -41,7 +41,7 @@ export default class rename extends React.Component {
     getConcept(concept) {
         this.setState({conceptValue: concept});
         localStorage.setItem("query", "match (n:concept)-[r]-(m:concept) where n.name = '" + concept + "' return n,r,m");
-        let tempUrl  = 'http://localhost:8080/graphie?concept='+concept;
+        let tempUrl  = 'http://192.168.1.55:8081/graphie?concept='+concept;
         this.setState({
             graph: <frameset>
                     <frame src={tempUrl}/>
@@ -79,7 +79,7 @@ renameConcepts(e) {
         this.setState({
             graph:<div><span></span>
             <frameset>
-                    <frame src='http://localhost:8080/graphie'/>
+                    <frame src='http://192.168.1.55:8081/graphie'/>
                 </frameset>
                 </div>
         });

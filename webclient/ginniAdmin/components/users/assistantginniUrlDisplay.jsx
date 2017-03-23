@@ -21,11 +21,11 @@ export default class AssistantGinniMixedReply extends React.Component {
     {
       this.setState({openSnackbar: true, snackbarMsg: 'saved for reference'});
           Axios({
-              url: ' http://localhost:8080/clientinformation',
+              url: ' http://192.168.1.55:8081/clientinformation',
               method: 'get'
           }).then(function(response) {
                     Axios({
-                      url: 'http://localhost:8080/savequery/answeredquery',
+                      url: 'http://192.168.1.55:8081/savequery/answeredquery',
                       method:'POST',
                       data: {email: response.data[0].local.email,
                             savedquery: {question: '', answer: message}}

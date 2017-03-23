@@ -21,7 +21,7 @@ export default class FrontPage extends React.Component {
     {
         Axios({
           method: 'GET',
-          url: 'http://localhost:8080/signout',
+          url: 'http://192.168.1.55:8081/signout',
           data: 'json'})
           .then(function(response) {
             Cookie.remove('authType');

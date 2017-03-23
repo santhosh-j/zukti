@@ -5,12 +5,12 @@ let app = require('../webserver/webapp.service')();
 let log4js = require('log4js');
 let logger = log4js.getLogger();
 
-// listening to port 8080
-let server = app.listen(8080, '0.0.0.0', function(err, result) {
+// listening to port 8081
+let server = app.listen(8081, '0.0.0.0', function(err, result) {
     if (err) {
         logger.debug("error: ", err);
     }
-    logger.debug("server started at 8080");
+    logger.debug("server started at 8081");
 });
 let io = require('socket.io')(server);
 

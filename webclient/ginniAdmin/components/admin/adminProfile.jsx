@@ -62,7 +62,7 @@ export default class ClientProfile extends React.Component
     saveImage(image) {
         Axios({
             method: 'POST',
-            url: 'http://localhost:8080/uploadImage',
+            url: 'http://192.168.1.55:8081/uploadImage',
             data: {
                 data: image
             }
@@ -85,7 +85,7 @@ export default class ClientProfile extends React.Component
     componentDidMount() {
         let self = this;
         Axios({
-          url: ' http://localhost:8080/clientinformation',
+          url: ' http://192.168.1.55:8081/clientinformation',
           method: 'get'})
           .then(function(response) {
             self.setState({email: response.data[0].local.email});
@@ -98,7 +98,7 @@ export default class ClientProfile extends React.Component
         const self = this;
         e.preventDefault();
         Axios({
-            url: ' http://localhost:8080/updateprofile',
+            url: ' http://192.168.1.55:8081/updateprofile',
             method: 'put',
             data: {
                 email: this.state.email,
